@@ -50,10 +50,8 @@ class _MyHomePageState extends State<MyHomePage> {
             .toString();
     setState(() {});
   }
-  void _opeation(){
 
-  }
-
+  void _opeation() {}
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +80,9 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Button(
                   text: "AC",
-                  onTap: () {},
+                  onTap: () {
+                    textEditingController.text = "0";
+                  },
                   color: Colors.brown,
                 ),
                 Button(
@@ -108,21 +108,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   text: "7",
                   onTap: () {
                     _addNo(7);
-
                   },
                 ),
                 Button(
                   text: "8",
                   onTap: () {
                     _addNo(8);
-
                   },
                 ),
                 Button(
                   text: "9",
                   onTap: () {
                     _addNo(9);
-
                   },
                 ),
                 Button(
@@ -138,21 +135,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   text: "4",
                   onTap: () {
                     _addNo(4);
-
                   },
                 ),
                 Button(
                   text: "5",
                   onTap: () {
                     _addNo(5);
-
                   },
                 ),
                 Button(
                   text: "6",
                   onTap: () {
                     _addNo(6);
-
                   },
                 ),
                 Button(
@@ -168,21 +162,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   text: "1",
                   onTap: () {
                     _addNo(1);
-
                   },
                 ),
                 Button(
                   text: "2",
                   onTap: () {
                     _addNo(2);
-
                   },
                 ),
                 Button(
                   text: "3",
                   onTap: () {
                     _addNo(3);
-
                   },
                 ),
                 Button(
@@ -198,20 +189,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   text: "0",
                   onTap: () {
                     _addNo(0);
-
                   },
                   width: MediaQuery.of(context).size.width / 2,
                 ),
                 Button(
                   text: ".",
-                  onTap: () {
-                    
-                  },
+                  onTap: () {},
                 ),
                 Button(
                   text: "=",
-                  onTap: () {
-                  },
+                  onTap: () {},
                   color: Colors.yellow[800],
                 ),
               ],
