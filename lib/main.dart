@@ -36,12 +36,24 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  double data = 0;
   TextEditingController textEditingController = TextEditingController();
+  @override
+  void initState() {
+    textEditingController.text = "0";
+    super.initState();
+  }
+
+  double data = 0;
   void _addNo(double no) {
     textEditingController.text =
-        (double.parse(textEditingController.text.toString())+no).toString();
+        (double.parse(textEditingController.text.toString()) * 10 + no)
+            .toString();
+    setState(() {});
   }
+  void _opeation(){
+
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -94,15 +106,24 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Button(
                   text: "7",
-                  onTap: () {},
+                  onTap: () {
+                    _addNo(7);
+
+                  },
                 ),
                 Button(
                   text: "8",
-                  onTap: () {},
+                  onTap: () {
+                    _addNo(8);
+
+                  },
                 ),
                 Button(
                   text: "9",
-                  onTap: () {},
+                  onTap: () {
+                    _addNo(9);
+
+                  },
                 ),
                 Button(
                   text: "X",
@@ -115,15 +136,24 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Button(
                   text: "4",
-                  onTap: () {},
+                  onTap: () {
+                    _addNo(4);
+
+                  },
                 ),
                 Button(
                   text: "5",
-                  onTap: () {},
+                  onTap: () {
+                    _addNo(5);
+
+                  },
                 ),
                 Button(
                   text: "6",
-                  onTap: () {},
+                  onTap: () {
+                    _addNo(6);
+
+                  },
                 ),
                 Button(
                   text: "-",
@@ -136,15 +166,24 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Button(
                   text: "1",
-                  onTap: () {},
+                  onTap: () {
+                    _addNo(1);
+
+                  },
                 ),
                 Button(
                   text: "2",
-                  onTap: () {},
+                  onTap: () {
+                    _addNo(2);
+
+                  },
                 ),
                 Button(
                   text: "3",
-                  onTap: () {},
+                  onTap: () {
+                    _addNo(3);
+
+                  },
                 ),
                 Button(
                   text: "+",
@@ -157,16 +196,22 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Button(
                   text: "0",
-                  onTap: () {},
+                  onTap: () {
+                    _addNo(0);
+
+                  },
                   width: MediaQuery.of(context).size.width / 2,
                 ),
                 Button(
                   text: ".",
-                  onTap: () {},
+                  onTap: () {
+                    
+                  },
                 ),
                 Button(
                   text: "=",
-                  onTap: () {},
+                  onTap: () {
+                  },
                   color: Colors.yellow[800],
                 ),
               ],
@@ -194,7 +239,9 @@ class Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        onTap();
+      },
       child: Container(
         width: width == 0 ? MediaQuery.of(context).size.width / 4 : width,
         height: MediaQuery.of(context).size.height / 6,
